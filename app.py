@@ -40,7 +40,11 @@ def render():
         state = json.loads(update.read_text(encoding="utf-8"))
         st.caption(f"最近更新：{state['state']}｜嘗試時間 UTC：{state['attempt_at_utc']}")
         if state['state'] != "SUCCESS":
-            st.warning("摘要正在更新或更新失敗；目前保留上一份成功摘要，請留意資料日期。")
+            st.warning("摘要更新尚未成功確認；畫面依目前有效發布指標讀取，請留意資料日期與發布時間。")
+    active = ROOT/'active.json'
+    if active.exists():
+        pointer = json.loads(active.read_text(encoding='utf-8'))
+        st.caption(f"摘要發布時間 UTC：{pointer.get('published_at_utc','未記錄')}。此為歷史研究重算，非即時報價或當日向前預測。")
     if not records:
         st.write("尚無發布摘要。")
         return

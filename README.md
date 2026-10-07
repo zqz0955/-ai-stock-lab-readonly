@@ -13,7 +13,11 @@
 
 唯讀入口可在雲端呈現保存摘要，不需要原研究電腦一直開機；**新摘要產生與發布仍需要研究環境完成更新並提交這個儲存庫**。Community Cloud不會自行下載行情或重新訓練。未更新時畫面顯示過期／來源缺口。
 
-正式固定網址尚須實際部署後才能填入。此方案已由使用者選擇，不訂閱付費服務。官方：[Community Cloud](https://docs.streamlit.io/deploy/streamlit-community-cloud)、[部署設定](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy)。
+固定入口：[開啟唯讀研究展示](https://zqz0955--ai-stock-lab-readonly-app-x1owmm.streamlit.app/)。已驗證公開HTTPS、摘要、圖表、重新整理、三個同時使用的獨立瀏覽器session及390px手機尺寸；尚未用實體手機或行動網路驗證。這是免費教學展示，不代表持續可用性保證。
+
+目前發布資料截至2026-10-07，模型仍未校準，存在來源／日曆缺口；以畫面列出的日期與缺口為準。**目前沒有自動提交新摘要至GitHub的流程**，本機更新完成不代表雲端已更新。
+
+此方案已由使用者選擇，不訂閱付費服務。官方：[Community Cloud](https://docs.streamlit.io/deploy/streamlit-community-cloud)、[部署設定](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy)。
 
 ## 本機查看
 
