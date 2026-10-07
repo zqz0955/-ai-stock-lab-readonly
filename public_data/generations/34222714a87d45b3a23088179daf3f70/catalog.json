@@ -1,0 +1,184 @@
+[
+  {
+    "key": "2330_TW_lr",
+    "symbol": "2330.TW",
+    "model": "Logistic Regression",
+    "data_date": "2026-10-07",
+    "fetched_at_utc": "20261007T145447003703Z",
+    "available_at_utc": "2026-10-07T14:54:47.032706+00:00",
+    "generated_at_utc": "2026-10-07T14:54:51.139811+00:00",
+    "cache_key": "fb7fa27ad5866d7b81f0e75c76d8002ef7ee879b38fa56d7589750685e281bf2",
+    "source_sha256": "1d70cbbd79759b87edc7c06ba03e22ba54b8ebc8c47c7ec595b7136d8c28000c",
+    "version": "6.1.0",
+    "market_timing": {
+      "download_seconds": 0.8379616999991413,
+      "snapshot_read_seconds": 0.04110429999855114
+    },
+    "score_first": "2020-01-02",
+    "score_last": "2026-07-09",
+    "signal_date": "2026-10-07",
+    "calibrated": false,
+    "forward_validated": false,
+    "source": "Yahoo historical daily snapshot",
+    "calendar_gap_n": 1,
+    "calendar_gaps": [
+      {
+        "date": "2026-07-10",
+        "status": "行情缺漏／停牌／臨時休市待查"
+      }
+    ]
+  },
+  {
+    "key": "2330_TW_rf",
+    "symbol": "2330.TW",
+    "model": "Random Forest",
+    "data_date": "2026-10-07",
+    "fetched_at_utc": "20261007T145447003703Z",
+    "available_at_utc": "2026-10-07T14:54:47.032706+00:00",
+    "generated_at_utc": "2026-10-07T14:55:05.442497+00:00",
+    "cache_key": "c014477aaaade23fb0ecd62b7d276743ad68dd82190473fb275fd7ecbe7c2605",
+    "source_sha256": "1d70cbbd79759b87edc7c06ba03e22ba54b8ebc8c47c7ec595b7136d8c28000c",
+    "version": "6.1.0",
+    "market_timing": {
+      "download_seconds": 0.8379616999991413,
+      "snapshot_read_seconds": 0.04110429999855114
+    },
+    "score_first": "2020-01-02",
+    "score_last": "2026-07-09",
+    "signal_date": "2026-10-07",
+    "calibrated": false,
+    "forward_validated": false,
+    "source": "Yahoo historical daily snapshot",
+    "calendar_gap_n": 1,
+    "calendar_gaps": [
+      {
+        "date": "2026-07-10",
+        "status": "行情缺漏／停牌／臨時休市待查"
+      }
+    ]
+  },
+  {
+    "key": "0050_TW_lr",
+    "symbol": "0050.TW",
+    "model": "Logistic Regression",
+    "data_date": "2026-10-07",
+    "fetched_at_utc": "20261007T145505766414Z",
+    "available_at_utc": "2026-10-07T14:55:05.792370+00:00",
+    "generated_at_utc": "2026-10-07T14:55:09.488986+00:00",
+    "cache_key": "2b77a33256789043ca3d5be5615868a7519d3abea2396a8efabdf1238deb2c37",
+    "source_sha256": "dbd5befc2c051439b113ad97a0d4c2ff36b4851fa192ab19b72f7acbb273991e",
+    "version": "6.1.0",
+    "market_timing": {
+      "download_seconds": 0.32381549999990966,
+      "snapshot_read_seconds": 0.026056499998958316
+    },
+    "score_first": "2020-01-02",
+    "score_last": "2026-07-08",
+    "signal_date": "2026-10-07",
+    "calibrated": false,
+    "forward_validated": false,
+    "source": "Yahoo historical daily snapshot",
+    "calendar_gap_n": 2,
+    "calendar_gaps": [
+      {
+        "date": "2026-07-10",
+        "status": "行情缺漏／停牌／臨時休市待查"
+      },
+      {
+        "date": "2026-10-06",
+        "status": "行情缺漏／停牌／臨時休市待查"
+      }
+    ]
+  },
+  {
+    "key": "0050_TW_rf",
+    "symbol": "0050.TW",
+    "model": "Random Forest",
+    "data_date": "2026-10-07",
+    "fetched_at_utc": "20261007T145505766414Z",
+    "available_at_utc": "2026-10-07T14:55:05.792370+00:00",
+    "generated_at_utc": "2026-10-07T14:55:23.472295+00:00",
+    "cache_key": "cbfac53e6497926335a546b5927d5b402d5b09d2f77d4b3bd4a4b114f0402d80",
+    "source_sha256": "dbd5befc2c051439b113ad97a0d4c2ff36b4851fa192ab19b72f7acbb273991e",
+    "version": "6.1.0",
+    "market_timing": {
+      "download_seconds": 0.32381549999990966,
+      "snapshot_read_seconds": 0.026056499998958316
+    },
+    "score_first": "2020-01-02",
+    "score_last": "2026-07-08",
+    "signal_date": "2026-10-07",
+    "calibrated": false,
+    "forward_validated": false,
+    "source": "Yahoo historical daily snapshot",
+    "calendar_gap_n": 2,
+    "calendar_gaps": [
+      {
+        "date": "2026-07-10",
+        "status": "行情缺漏／停牌／臨時休市待查"
+      },
+      {
+        "date": "2026-10-06",
+        "status": "行情缺漏／停牌／臨時休市待查"
+      }
+    ]
+  },
+  {
+    "key": "2317_TW_lr",
+    "symbol": "2317.TW",
+    "model": "Logistic Regression",
+    "data_date": "2026-10-07",
+    "fetched_at_utc": "20261007T145523763266Z",
+    "available_at_utc": "2026-10-07T14:55:23.785916+00:00",
+    "generated_at_utc": "2026-10-07T14:55:27.592725+00:00",
+    "cache_key": "748a65aa0010ed7961d094e84f06001b083a8f1fb2a187073fe18d46ec6c506a",
+    "source_sha256": "63ad7b353d50480e788c756221a1a9bcb840dcf92853803ff3cbccbc598a0b80",
+    "version": "6.1.0",
+    "market_timing": {
+      "download_seconds": 0.2537841000012122,
+      "snapshot_read_seconds": 0.026659600000130013
+    },
+    "score_first": "2020-01-02",
+    "score_last": "2026-07-09",
+    "signal_date": "2026-10-07",
+    "calibrated": false,
+    "forward_validated": false,
+    "source": "Yahoo historical daily snapshot",
+    "calendar_gap_n": 1,
+    "calendar_gaps": [
+      {
+        "date": "2026-07-10",
+        "status": "行情缺漏／停牌／臨時休市待查"
+      }
+    ]
+  },
+  {
+    "key": "2317_TW_rf",
+    "symbol": "2317.TW",
+    "model": "Random Forest",
+    "data_date": "2026-10-07",
+    "fetched_at_utc": "20261007T145523763266Z",
+    "available_at_utc": "2026-10-07T14:55:23.785916+00:00",
+    "generated_at_utc": "2026-10-07T14:55:42.313356+00:00",
+    "cache_key": "1d81a685945ff7fafb7ea3b7782936b814c99277ad8cf0ca7f9c318307912776",
+    "source_sha256": "63ad7b353d50480e788c756221a1a9bcb840dcf92853803ff3cbccbc598a0b80",
+    "version": "6.1.0",
+    "market_timing": {
+      "download_seconds": 0.2537841000012122,
+      "snapshot_read_seconds": 0.026659600000130013
+    },
+    "score_first": "2020-01-02",
+    "score_last": "2026-07-09",
+    "signal_date": "2026-10-07",
+    "calibrated": false,
+    "forward_validated": false,
+    "source": "Yahoo historical daily snapshot",
+    "calendar_gap_n": 1,
+    "calendar_gaps": [
+      {
+        "date": "2026-07-10",
+        "status": "行情缺漏／停牌／臨時休市待查"
+      }
+    ]
+  }
+]
