@@ -41,6 +41,8 @@ def render():
         st.caption(f"最近更新：{state['state']}｜嘗試時間 UTC：{state['attempt_at_utc']}")
         if state['state'] != "SUCCESS":
             st.warning("摘要更新尚未成功確認；畫面依目前有效發布指標讀取，請留意資料日期與發布時間。")
+            if state.get('reason'):
+                st.caption(state['reason'])
     active = ROOT/'active.json'
     if active.exists():
         pointer = json.loads(active.read_text(encoding='utf-8'))
