@@ -9,6 +9,26 @@ import streamlit as st
 ROOT = Path(__file__).resolve().parent / "public_data"
 
 
+def show_quality(report, symbol, title):
+    st.subheader(title)
+    names = {'CONFIRMED_SOURCE_GAP':'證交所有成交，Yahoo 缺日',
+             'UNRESOLVED_SESSION':'年度表預定交易日但無官方成交；休市／停牌仍待核對',
+             'CHECK_UNAVAILABLE':'官方核對來源無法使用'}
+    for row in report.get('symbols',[]):
+        if row['symbol'] != symbol:
+            continue
+        st.caption(f"核對時間 UTC：{report['checked_at_utc']}｜Yahoo 截至 {row['yahoo_data_date']}｜狀態 {row['state']}")
+        st.caption(f"只核對日期；年度日曆涵蓋 {row['coverage_years']}，未核對年份、價格還原及成交能力仍未驗證。")
+        if row['state']=='BLOCKED':
+            st.error('本次來源核對未通過，沒有發布這份資料的新研究，也不判定進場觸發。')
+        for gap in row['gaps']:
+            st.warning(f"{gap['date']}：{names[gap['status']]}")
+        for check in row['checks']:
+            st.caption(f"證交所 {check['month']}：{check['status']}｜取得 UTC {check['retrieved_at_utc']}")
+        if not row['gaps']:
+            st.caption('已核對月份未發現成交日期缺口；不代表全歷史價格或策略已驗證。')
+
+
 def published():
     folder = ROOT
     active = ROOT / "active.json"
@@ -36,9 +56,12 @@ def render():
         st.error("摘要讀取或完整性檢查失敗，請由管理者重新發布；不顯示替代結果。")
         return
     update = ROOT/"update.json"
+    state = {}
     if update.exists():
         state = json.loads(update.read_text(encoding="utf-8"))
         st.caption(f"最近更新：{state['state']}｜嘗試時間 UTC：{state['attempt_at_utc']}")
+        if state.get('stage'):
+            st.caption(f"最近執行階段：{state['stage']}")
         if state['state'] != "SUCCESS":
             st.warning("摘要更新尚未成功確認；畫面依目前有效發布指標讀取，請留意資料日期與發布時間。")
             if state.get('reason'):
@@ -53,6 +76,13 @@ def render():
     labels = {f"{r['symbol']}｜{r['model']}｜資料截至 {r['data_date']}": r for r in records}
     choice = st.selectbox("研究摘要", list(labels))
     record = labels[choice]
+    if state.get('quality'):
+        show_quality(state['quality'],record['symbol'],'最近更新來源核對')
+    quality_path = folder/'quality.json'
+    if quality_path.exists():
+        show_quality(json.loads(quality_path.read_text(encoding='utf-8')),record['symbol'],'有效摘要來源核對')
+    else:
+        st.caption('此成功摘要較舊，尚未附新版本的證交所逐月來源核對；不能視為資料完整。')
     st.write(f"**行情截至 {record['data_date']}｜訊號日期 {record.get('signal_date',record['data_date'])}**")
     st.caption(f"共同答案已揭曉截至 {record['score_last']}")
     local = pd.Timestamp.now(tz="Asia/Taipei")
