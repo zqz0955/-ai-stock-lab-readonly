@@ -1,7 +1,125 @@
 {
-  "attempt_at_utc": "2026-10-07T23:10:07.721555+00:00",
-  "error_type": "ValueError",
-  "finished_at_utc": "2026-10-07T23:10:24.625442+00:00",
-  "reason": "來源日線含缺值或無限值，拒絕本次更新；有效發布指標未更換，不補值或刪除交易日。",
+  "attempt_at_utc": "2026-10-08T09:04:31.761832+00:00",
+  "error_type": "SourceQualityError",
+  "finished_at_utc": "2026-10-08T09:04:34.246479+00:00",
+  "quality": {
+    "schema": "twse-date-audit-v1",
+    "scope": "date_presence_only_not_price_adjustment",
+    "checked_at_utc": "2026-10-08T09:04:34.245482+00:00",
+    "symbols": [
+      {
+        "symbol": "2330.TW",
+        "yahoo_sha256": "69a6305675484b4dbccba80d5cbff6935c88426e17ed0c4e33e53483025599ba",
+        "yahoo_data_date": "2026-10-08",
+        "expected_completed": "2026-10-08",
+        "coverage_years": [
+          2026
+        ],
+        "checks": [
+          {
+            "month": "202607",
+            "source": "https://www.twse.com.tw/exchangeReport/STOCK_DAY?response=json&date=20260701&stockNo=2330",
+            "retrieved_at_utc": "2026-10-08T09:04:32.481955+00:00",
+            "sha256": "7c88e7356682959b0c619757f9e1797ef6c2ae90010692a87f7a45cb11728610",
+            "status": "OK",
+            "error_type": null
+          },
+          {
+            "month": "202610",
+            "source": "https://www.twse.com.tw/exchangeReport/STOCK_DAY?response=json&date=20261001&stockNo=2330",
+            "retrieved_at_utc": "2026-10-08T09:04:32.862961+00:00",
+            "sha256": "702eef0b3fea17bdc8a482fee96c681d182e5a8e92fe3c3307e54823a1dccd30",
+            "status": "OK",
+            "error_type": null
+          }
+        ],
+        "gaps": [
+          {
+            "date": "2026-07-10",
+            "month": "202607",
+            "status": "UNRESOLVED_SESSION"
+          }
+        ],
+        "state": "WARN"
+      },
+      {
+        "symbol": "0050.TW",
+        "yahoo_sha256": "986722fa44641f84b6ea6940f86ccb1ea8a1c4cc4162f3f223dbb6e6aea7d87d",
+        "yahoo_data_date": "2026-10-08",
+        "expected_completed": "2026-10-08",
+        "coverage_years": [
+          2026
+        ],
+        "checks": [
+          {
+            "month": "202607",
+            "source": "https://www.twse.com.tw/exchangeReport/STOCK_DAY?response=json&date=20260701&stockNo=0050",
+            "retrieved_at_utc": "2026-10-08T09:04:33.515752+00:00",
+            "sha256": "97006d0b71358317601fa9dfe646c34c0d6b2decc49e9afb82dfbd2aa932fc8d",
+            "status": "OK",
+            "error_type": null
+          },
+          {
+            "month": "202610",
+            "source": "https://www.twse.com.tw/exchangeReport/STOCK_DAY?response=json&date=20261001&stockNo=0050",
+            "retrieved_at_utc": "2026-10-08T09:04:33.614874+00:00",
+            "sha256": "3ca6f30ff00e124e3ca1ae11c43159a68a9a560f9b02d0553ec203103b7f5743",
+            "status": "OK",
+            "error_type": null
+          }
+        ],
+        "gaps": [
+          {
+            "date": "2026-07-10",
+            "month": "202607",
+            "status": "UNRESOLVED_SESSION"
+          },
+          {
+            "date": "2026-10-07",
+            "status": "CONFIRMED_SOURCE_GAP",
+            "month": "202610"
+          }
+        ],
+        "state": "BLOCKED"
+      },
+      {
+        "symbol": "2317.TW",
+        "yahoo_sha256": "f5ac71405f65d1ee4ed713e11e49acaa24213bef8eb93674c5bad38e35c9ee00",
+        "yahoo_data_date": "2026-10-08",
+        "expected_completed": "2026-10-08",
+        "coverage_years": [
+          2026
+        ],
+        "checks": [
+          {
+            "month": "202607",
+            "source": "https://www.twse.com.tw/exchangeReport/STOCK_DAY?response=json&date=20260701&stockNo=2317",
+            "retrieved_at_utc": "2026-10-08T09:04:33.909902+00:00",
+            "sha256": "de1caf127a482cac513a1013ee0b0cec1f26e2f23aefbd49e5f7ee57cff6e45a",
+            "status": "OK",
+            "error_type": null
+          },
+          {
+            "month": "202610",
+            "source": "https://www.twse.com.tw/exchangeReport/STOCK_DAY?response=json&date=20261001&stockNo=2317",
+            "retrieved_at_utc": "2026-10-08T09:04:34.152202+00:00",
+            "sha256": "018dd9fe9b5ceb7b0212cfcd79018c0e3611b7f7d145aa877aacf8731485ed6d",
+            "status": "OK",
+            "error_type": null
+          }
+        ],
+        "gaps": [
+          {
+            "date": "2026-07-10",
+            "month": "202607",
+            "status": "UNRESOLVED_SESSION"
+          }
+        ],
+        "state": "WARN"
+      }
+    ]
+  },
+  "reason": "成交日期核對未通過：來源漏日、資料過期、日曆不足或官方來源無法核對；保留上一份成功摘要，不補值。",
+  "stage": "成交日期核對：2317.TW",
   "state": "FAILED"
 }
